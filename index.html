@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Frissio: Expense intelligence that stays on your device</title>
-<meta name="description" content="Frissio reads your bank statements on your Mac, categorizes every transaction, and shows you where your money actually goes. Nothing leaves your device.">
+<meta name="description" content="Frissio reads your bank statements on your Mac, categorizes every transaction, and gets your income, investment, and deduction totals ready for tax season. Nothing leaves your device.">
 <meta property="og:title" content="Frissio">
 <meta property="og:description" content="Expense intelligence that stays on your device.">
 <meta property="og:image" content="screenshots/dashboard.png">
@@ -96,8 +96,17 @@
   header.hero p.sub {
     font-size: 19px;
     color: var(--ink-soft);
-    max-width: 600px;
+    max-width: 640px;
     margin: 0 auto 22px;
+  }
+  header.hero .eyebrow {
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-soft);
+    margin: 0 0 18px;
   }
   header.hero .privacy-badge {
     display: flex;
@@ -468,8 +477,9 @@
 
 <header class="hero">
   <div class="wrap">
+    <span class="eyebrow">For ITR 2026 · FY 2025–26</span>
     <h1>See where your money<br>actually goes.</h1>
-    <p class="sub">Drop in any bank or credit card statement. Every transaction is auto-categorized into income, investments, and expenses.</p>
+    <p class="sub">Drop in any bank or credit card statement. Every transaction is auto-categorized into income, investments, and expenses, then totaled into a clean summary you can hand your CA at tax time.</p>
     <div class="privacy-badge">
       <span class="privacy-dot"></span>
       <span class="privacy-text">Local-first · Nothing leaves your Mac</span>
@@ -552,10 +562,16 @@
   <div class="wrap">
     <div class="feature-inner">
       <div class="feature-text">
-        <h2>Teach it once. It remembers.</h2>
-        <p>Frissio groups uncategorized merchants together so you handle them in batches, not row by row. Set the category once. Every statement after that uses your rule, with no spreadsheet upkeep and no monthly retagging.</p>
+        <h2>Get your numbers ready for tax season.</h2>
+        <p>Frissio sorts the year's spending into the sections that matter at filing time, rent, insurance, home loan, donations, investments, and totals what you confirm. Export it as a clean PDF or CSV for your CA. It sums what you tag and never calculates your tax or tells you what to claim. That stays between you and your accountant.</p>
+        <ul class="feature-list">
+          <li>Income, investments, and expenses totaled by category</li>
+          <li>Deduction sections (80C, 80D, 80G, 24b, HRA) you confirm yourself</li>
+          <li>Financial-year ranges, April to March, built in</li>
+          <li>Export to PDF for your CA, CSV for your spreadsheet</li>
+        </ul>
       </div>
-      <div class="shot-frame"><img src="screenshots/categorize.png" alt="Frissio categorization view"></div>
+      <div class="shot-frame"><img src="screenshots/deductions.png" alt="Frissio tax deductions summary, ready to export for a CA"></div>
     </div>
   </div>
 </section>
@@ -563,11 +579,23 @@
 <section class="feature reverse">
   <div class="wrap">
     <div class="feature-inner">
-      <div class="shot-frame"><img src="screenshots/privacy.png" alt="Frissio privacy settings"></div>
+      <div class="shot-frame"><img src="screenshots/categorize.png" alt="Frissio categorization view"></div>
+      <div class="feature-text">
+        <h2>Teach it once. It remembers.</h2>
+        <p>Frissio groups uncategorized merchants together so you handle them in batches, not row by row. Set the category once. Every statement after that uses your rule, with no spreadsheet upkeep and no monthly retagging.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="wrap">
+    <div class="feature-inner">
       <div class="feature-text">
         <h2>Your statements stay on your Mac.</h2>
         <p>Apple itself blocks Frissio from reaching the internet. Open Activity Monitor while you use it. Bytes sent stay at zero, every single session.</p>
       </div>
+      <div class="shot-frame"><img src="screenshots/privacy.png" alt="Frissio privacy settings"></div>
     </div>
   </div>
 </section>
@@ -609,6 +637,11 @@
     </details>
 
     <details class="q">
+      <summary>Can I use this to get ready for ITR filing?</summary>
+      <div class="answer">Yes. Frissio totals your income, investments, and expenses for the financial year, and lets you tag the spending that tends to matter at filing time, rent, insurance, home loan, donations, then exports a clean summary for your CA. It is not a filing tool and gives no tax advice. It sums what you confirm, and never calculates your tax or tells you what you can claim.</div>
+    </details>
+
+    <details class="q">
       <summary>What does Frissio figure out on its own?</summary>
       <div class="answer">Whether a transaction is income, an investment, or an expense. The category it belongs to (Food, Transport, Housing, and the rest). And the merchant behind a noisy bank description.</div>
     </details>
@@ -620,7 +653,7 @@
 
     <details class="q">
       <summary>Which banks are supported?</summary>
-      <div class="answer">HDFC and ICICI statements are recognized natively today. Other banks work via CSV import, which most net banking portals export directly. Native parser coverage is the part I am actively expanding, so if your bank is not listed yet, the CSV path still gets you to the same dashboard.</div>
+      <div class="answer">HDFC and ICICI bank statements and credit cards are recognized natively, along with Axis and American Express cards. Other banks work via CSV import, which most net banking portals export directly. If your bank is not listed yet, the CSV path still gets you to the same dashboard.</div>
     </details>
 
     <details class="q">
